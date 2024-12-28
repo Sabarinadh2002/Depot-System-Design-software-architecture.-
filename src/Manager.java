@@ -26,8 +26,18 @@ public class Manager {
     }
     public static void main (String[]args){
         Manager manager = new Manager();
-        manager.loadParcelData("parcels.txt");
-        manager.loadCustomerData("customers.txt");
-        manager.initGUI();
+
+        String customerFile = "/Custs.csv";
+        String parcelFile = "/Parcels.csv";
+
+        manager.loadCustomerData(customerFile);
+        manager.loadParcelData(parcelFile);
+
+        manager.processQueue();
+
+        Log.getInstance().writeToFile("Depot_log.txt");
+
+        System.out.println(manager.parcels.generateReport());
+        System.out.println("Processing complete. Log written to depot_log.txt");
     }
 }

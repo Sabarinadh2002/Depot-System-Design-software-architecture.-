@@ -3,20 +3,35 @@ public class Parcel {
     private Float weight;
     private int daysInDepot;
     private String dimensions;
-    private boolean isCollected;
+    private boolean collected;
+
+    public Parcel (String parcelID, String dimensions, float weight, int daysInDepot){
+        this.parcelID = parcelID;
+        this.dimensions = dimensions;
+        this.daysInDepot = daysInDepot;
+        this.collected = false;
+    }
 
     public String getParcelID(){
         return parcelID;
     }
     public boolean isCollected() {
-        return isCollected;
+        return collected;
     }
     public void setCollected(boolean collected){
-        isCollected = collected;
+        this.collected = collected;
     }
 
     public float getWeight() {
         return weight;
+    }
+
+    public float calculatefee(){
+        float baseFee = 5.0f;
+        float weightFee = this.weight * 0.5f;
+        float timeFee = this.daysInDepot * 1.0f;
+
+        return baseFee + weightFee + timeFee;
     }
 
     public int getDaysInDepot() {

@@ -9,31 +9,57 @@ public class Manager {
         worker = new Worker();
 
     }
-    public void loadParcelData(String ParcelFile){
-
+    public void loadParcelData(String parcelFile){
+        parcels.loadParcelData(parcelFile);
     }
     public void loadCustomerData(String customerFile){
-
+        queue.loadCustomerData(customerFile);
     }
     public void processQueue(){
-        while (!queue.getCustomerQueue().isEmpty()){
+        if (!queue.getCustomerQueue().isEmpty()){
             Customer c = queue.removeCustomer();
             worker.processCustomer(c, parcels);
+        }else {
+            Log.getInstance().append("No more customer in the queue. ");
         }
     }
-    public void initGUI(){
-
+    public void processOneCustomer() {
+        if (!queue.getCustomerQueue().isEmpty()) {
+            Customer c = queue.removeCustomer();
+            worker.processCustomer(c, parcels);
+        } else {
+            Log.getInstance().append("No more customers in the queue.");
+        }
     }
+
+    public QueueofCustomers getQueue(){
+        return queue;
+    }
+    public ParcelMap getParcels(){
+        return parcels;
+    }
+
+    public Worker getWorker() {
+        return worker;
+    }
+
+    public void initGUI(){
+        new DepotGUI(this);
+    }
+
     public static void main (String[]args){
         Manager manager = new Manager();
 
-        String customerFile = "/Custs.csv";
-        String parcelFile = "/Parcels.csv";
+        String customerFile = "src/Custs.csv";
+        String parcelFile = "src/Parcels.csv";
 
-        manager.loadCustomerData(customerFile);
         manager.loadParcelData(parcelFile);
+        manager.loadCustomerData(customerFile);
+
 
         manager.processQueue();
+
+        manager.initGUI();
 
         Log.getInstance().writeToFile("Depot_log.txt");
 

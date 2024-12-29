@@ -19,4 +19,10 @@ public class Customer {
     public String getParcelID() {
         return parcelID;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Queue #%d | Name: %s | Parcel ID: %s",
+                queueNumber, name, parcelID);
+    }
 }

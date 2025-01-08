@@ -1,3 +1,5 @@
+package model;
+
 public class Parcel {
     private String parcelID;
     private int daysInDepot;

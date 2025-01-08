@@ -1,7 +1,10 @@
+package model;
+
 public class Worker {
 
     public void processCustomer(Customer customer, ParcelMap parcelMap){
-        Parcel parcel = parcelMap.getParcelByID(customer.getParcelID());
+        // Use the correct method name:
+        Parcel parcel = parcelMap.getParcelByID(customer.getDesiredParcelID());
         if (parcel == null){
             Log.getInstance().append("Parcel not found for " + customer.getName());
             return;
@@ -9,10 +12,12 @@ public class Worker {
         if (!parcel.isCollected()){
             float fee = calculateFee(parcel);
             parcel.setCollected(true);
-            Log.getInstance().append("Parcel" + parcel.getParcelID() + "collected by" + customer.getName() + ".Fee: "+ fee);
+            Log.getInstance().append("Parcel " + parcel.getParcelID()
+                    + " collected by " + customer.getName()
+                    + ". Fee: " + fee);
 
-        }else{
-            Log.getInstance().append("Parcel already collected: "+ parcel.getParcelID());
+        } else {
+            Log.getInstance().append("Parcel already collected: " + parcel.getParcelID());
         }
     }
     public float calculateFee(Parcel p){

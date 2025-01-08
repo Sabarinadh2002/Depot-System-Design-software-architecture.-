@@ -1,0 +1,37 @@
+Customers loaded successfully from src/Database/Custs.csv
+Parcels loaded successfully from src/Database/Parcels.csv
+Removed Customer: Ann Jones
+Removed Parcel: X198
+Processed Parcel: X009, Fee: 14.5, Customer: John Brown
+Processed Parcel: X020, Fee: 6.5, Customer: Tim Smith
+Processed Parcel: X025, Fee: 12.5, Customer: Lucy Grey
+Processed Parcel: X036, Fee: 15.0, Customer: Peter White
+Processed Parcel: X086, Fee: 14.0, Customer: Tony Lawson
+Processed Parcel: X121, Fee: 11.5, Customer: Lily Watson
+Processed Parcel: X213, Fee: 13.0, Customer: Joe Woods
+Processed Parcel: X214, Fee: 10.0, Customer: Susan Turner
+Processed Parcel: X278, Fee: 11.5, Customer: David Hunter
+Processed Parcel: X285, Fee: 8.0, Customer: Jo Hill
+Processed Parcel: X309, Fee: 7.0, Customer: Helen Webster
+Processed Parcel: X316, Fee: 16.5, Customer: Dave Jackson
+Processed Parcel: X386, Fee: 14.5, Customer: Gillian Hamilton
+Processed Parcel: X475, Fee: 10.5, Customer: Fiona Thoms
+Processed Parcel: X507, Fee: 11.5, Customer: Thomas Young
+Processed Parcel: X521, Fee: 13.0, Customer: Pamela Field
+Processed Parcel: X540, Fee: 15.0, Customer: Viola Nicholson
+Processed Parcel: X552, Fee: 11.5, Customer: Keith Burns
+Processed Parcel: X606, Fee: 17.0, Customer: Robert Murray
+Processed Parcel: X682, Fee: 11.0, Customer: Blair Foster
+Processed Parcel: X720, Fee: 10.0, Customer: Donald Murray
+Processed Parcel: X733, Fee: 14.0, Customer: Jack Houston
+Processed Parcel: X746, Fee: 11.0, Customer: Ursula Milton
+Processed Parcel: X780, Fee: 9.5, Customer: Bob Dawson
+Processed Parcel: X782, Fee: 11.5, Customer: Chris Smith
+Processed Parcel: X857, Fee: 10.0, Customer: Harry Johnston
+Processed Parcel: X904, Fee: 9.5, Customer: Judy Hilman
+Processed Parcel: X919, Fee: 14.0, Customer: Andrew Robertson
+Added new Parcel: X198
+Added new Customer: Sabi, Parcel: X064
+Processed Parcel: X064, Fee: 15.0, Customer: Sabi
+Processed Parcel: X198, Fee: 26.5, Customer: Mary Brown
+Total Fees Collected: 375.0

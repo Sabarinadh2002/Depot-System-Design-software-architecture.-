@@ -1,3 +1,5 @@
+package model;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +10,7 @@ public class ParcelMap {
 
     public void addParcel(Parcel p){
         parcelMap.put(p.getParcelID(),p);
-        Log.getInstance().append("Parcel added: "+ p.getParcelID());
+        Log.getInstance().append("model.Parcel added: "+ p.getParcelID());
     }
     public Parcel getParcelByID(String parcelID){
         return parcelMap.get(parcelID);
@@ -41,7 +43,7 @@ public class ParcelMap {
                     );
                 }
             }
-            Log.getInstance().append("Parcel data loaded successfully from " + parcelFile);
+            Log.getInstance().append("model.Parcel data loaded successfully from " + parcelFile);
         } catch (IOException e) {
             Log.getInstance().append("Error reading parcel file: " + e.getMessage());
         } catch (NumberFormatException e) {
@@ -57,7 +59,7 @@ public class ParcelMap {
      */
     public String generateReport() {
         StringBuilder sb = new StringBuilder();
-        sb.append("---- Parcel Report ----\n");
+        sb.append("---- model.Parcel Report ----\n");
         for (Parcel p : parcelMap.values()) {
             sb.append(p.toString()).append("\n");
         }
